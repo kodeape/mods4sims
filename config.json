@@ -1,25 +1,20 @@
 {
-    "simsdir": "C:/Users/my_user/Documents/Electronic Arts/The Sims 4",
+    "simsdir": "C:/Users/YOUR_USER/Documents/Electronic Arts/The Sims 4",
     "backup": {
-        "dir": "C:/Users/my_user/Dokumenter/Sims backup",
+        "dir": "C:/Users/YOUR_USER/Documents/Sims backup",
         "folders": ["Mods", "saves", "Tray"],
         "enabled": false
     },
     "modlist": [
         {
-            "name": "template",
+            "name": "name of this mod",
             "url": "https://www.download.url/here",
             "enabled": false
         },
         {
-            "name": "uicheats",
-            "url": "https://www.patreon.com/file?h=26240068&i=8831998",
-            "enabled": true
-        },
-        {
-            "name": "mccc",
-            "url": "https://www.mediafire.com/file/39p893m7wm8i9q6/McCmdCenter_AllModules_2021_2_1.zip/file",
-            "enabled": true
+            "name": "mod 2",
+            "url": "https://www.download.url/for/this/mod",
+            "enabled": false
         }
     ]
 }

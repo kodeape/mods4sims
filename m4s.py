@@ -36,7 +36,7 @@ def copy_dir(src_dir: Path, dest_dir: Path):
 
 def install_mod(mod, install_dir: Path):
     r = requests.get(mod['url'])
-    zip_file = Path(mod['name'] + '.zip')
+    zip_file = Path('temp.zip')
     print('Downloading', mod['name'], 'zip...')
     zip_file.write_bytes(r.content)
     with ZipFile(str(zip_file), 'r') as zip_ref:
@@ -54,6 +54,7 @@ def main():
         if not backup_dir.exists():
             raise Exception('The backup directory does not exist.')
         for folder in CONFIG['backup']['folders']:
+            print('Backing up', folder, 'folder...')
             copy_dir(sims_dir / folder, backup_dir / folder)
 
     install_dir = sims_dir / 'Mods'
@@ -64,7 +65,6 @@ def main():
             mod_dir = install_dir / mod['name']
             ready_dir(mod_dir)
             install_mod(mod, mod_dir)
-
 
 if __name__ == '__main__':
     main()
